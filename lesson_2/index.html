@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var a = 1, b = 1, c, d;
+        c = ++a; alert(c);           // 2 (Префиксная форма. Инкрементирование производится сразу.)
+        d = b++; alert(d);           // 1 (Постфиксная форма. Сначала происходит возвращение значения.)
+        c = (2+ ++a); alert(c);      // 5 (2+3 из-за префиксной формы)
+        d = (2+ b++); alert(d);      // 4 (2+2 т.к к d прибавился 1 после возвращения значения)
+        alert(a);                    // 3 (в первом и третьем случае прибавляется 1 к a)
+        alert(b);                    // 3 (во втором и четвертом случае прибавляется 1 к b)
+    </script>
+    <script>
+        var a = 2;
+        var x = 1 + (a *= 2);
+        x=5;
+    </script>
+    <script>
+        var a = 8, b = 5;
+        var c = (8 - 5);
+        alert(c);
+        a = -3, b = -7;
+        c = (-3-(-7));
+        alert(c);
+        a = -4, b = 8;
+        c = (-4 + 8);
+        alert(c);
+    </script>
+    <script>
+        var a = 12;
+        
+        switch (a) {
+            case 12:
+                alert("12");
+            case 13:
+                alert("13");
+            case 14:
+                alert("14");
+            case 15:
+                alert("15");
+        }
+        
+    </script>
+    <script>
+        
+        var a = 45, b = 20;
+        
+        function Adding(a, b) {
+            return a + b;
+        }
+        
+        
+        function Subtract(a, b) {
+            return a - b;
+        }
+        
+        function Multiply(a, b) {
+            return a * b;   
+        }
+        
+        function Divide(a, b) {
+            return a / b;
+        }
+    </script>
+    <script>
+        var arg1 = 9, arg2 = 4;
+        
+        function mathOperation(arg1, arg2, operation) {
+            var result;
+            
+            switch (operation) {
+                case "Adding": 
+                    result = Adding(arg1, arg2);
+                    break;
+                case "Subtract":
+                    result = Subtract(arg1, arg2);
+                    break;
+                case "Multiply":
+                    result = Multiply(arg1, arg2);
+                    break;
+                case "Divide":
+                    result = Divide(arg1, arg2);
+                    break;
+                    
+            }
+            return result;
+        }
+    </script>
+    <script>
+        // null-это отсутствие значения, 0-конкретное значение
+    </script>
+</body>
+
+</html>
