@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function isPrime(num) {
+            if(num < 2) {
+                return false;
+            }
+            
+            var i = 2;
+            while(i < num) {
+                if(num % i === 0) {
+                    return false;
+                }
+                i++;
+            }
+            return true;
+        }
+        
+        var i = 0;
+        while(i <= 100) {
+            if(isPrime(i)) {
+                console.log(i);
+            }
+        }
+    </script>
+    <script>
+        
+        var cart = [
+            ["Майка", 300, 2],
+            ["Ботинки", 600, 1],
+            ["Шорты", 500, 1],
+        ];
+       
+        function getTotal(cart){
+            var total = 0;
+            for(var i = 0; i < cart.length; i++){
+                total = total + cart[i][1] * cart[i][2];
+            }
+            return total;
+        }
+    
+    </script>
+    <script>
+        for(var i = 0;i <= 9;alert(i++)){}
+    </script>
+    <script>
+        for(var i = 1, pyramid = " "; i <= 20; i++) {
+				pyramid += "x";
+				console.log(pyramid);
+			}
+    </script>
+</body>
+</html>
