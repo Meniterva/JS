@@ -6,23 +6,42 @@
 </head>
 <body>
     <script>
-        var i = 0;
+        function isPrime(num) {
+            if(num < 2) {
+                return false;
+            }
+            
+            var i = 2;
+            while(i < num) {
+                if(num % i === 0) {
+                    return false;
+                }
+                i++;
+            }
+            return true;
+        }
         
-        while(i<=100){
-            alert(i);
-            i++;
-        } 
+        var i = 0;
+        while(i <= 100) {
+            if(isPrime(i)) {
+                console.log(i);
+            }
+        }
     </script>
     <script>
-        var arr = [{id:"товар", sum: 20}, {id:"товар1", sum: 30}, {id:"товар2", sum: 40}];
         
-        function countBasketPrice() {
-            var result = 0;
-            
-            for (var i = 0; i < arr.length; i += 1) {
-                result += arr[i].sum;
+        var cart = [
+            ["Майка", 300, 2],
+            ["Ботинки", 600, 1],
+            ["Шорты", 500, 1],
+        ];
+       
+        function getTotal(cart){
+            var total = 0;
+            for(var i = 0; i < cart.length; i++){
+                total = total + cart[i][1] * cart[i][2];
             }
-            return result;
+            return total;
         }
     
     </script>
