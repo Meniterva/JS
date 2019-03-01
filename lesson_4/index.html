@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function numberToObject(num){
+            if(num < 0) {
+                throw new Error("Функция не работает с отрицательными числами");
+                return;
+            }
+            
+            var keys = ["units", "dozens", "hundreds"];
+            
+            num = num + " ";
+            
+            if(num.length > keys.length){
+                throw new Error("Такие большие числа не поддерживаются");
+                return;
+            }
+            var obj = {};
+            for(var i = num.length - 1; i >= 0; i--) {
+                var key = keys[num.length - 1 - i];
+                obj[key] = num[i];
+            }
+            return obj;
+            
+            
+        }
+    </script>
+    <script>
+        
+        var cart = [
+            {name: "Майка", price: 300, count: 2}, 
+            {name: "Ботинки", price: 600, count: 1},
+            {name: "Шорты", price: 500, count: 1},
+        ];
+
+        function getTotal(cart) {
+            var total = 0;
+            for (var i = 0; i < cart.length; i++) {
+                total = total + cart[i].price * cart[i].count;
+            }
+            return total;
+        }
+    </script>
+</body>
+
+</html>
