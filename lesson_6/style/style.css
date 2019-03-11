@@ -1,0 +1,19 @@
+#catalog li {
+    height: 100px;
+    width: 500px;
+    border: 1px solid black;
+    list-style-type: none;
+    text-align: center;
+    padding-top: 50px;
+    font-size: 20px;
+    font-family: cursive;
+    background-color: lavenderblush;
+    
+}
+
+#catalog button {
+    width: 100px;
+    height: 30px;
+    border-radius: 30px;
+    background-color: white;
+}
